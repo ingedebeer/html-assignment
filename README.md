@@ -21,3 +21,9 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   All the colours I used are calming while still creating a large enough contrast for accessibility. <br>
 * Layout : 
   The navigation bar was centered and changed into a horizontal list to make it easily locatable. <br>
+* Validation :
+  I used the W3C Validator and the first time no errors came up. I realised I used the wrong one and corrected the errors that came up <br>
+* Reflection :
+  I experiences this section of the assignment to be slightly easier than the first because seeing the vision take shape guided me.
+
+  
