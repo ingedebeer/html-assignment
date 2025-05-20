@@ -22,8 +22,21 @@ I chose to add an image of myself because it adds a personal feel to the site wh
 * Layout : 
   The navigation bar was centered and changed into a horizontal list to make it easily locatable. <br>
 * Validation :
-  I used the W3C Validator and the first time no errors came up. I realised I used the wrong one and corrected the errors that came up <br>
+  I used the W3C Validator and the first time no errors came up. <br>
+  I realised I used the wrong one (HTML instead of CSS) and corrected the errors that came up. <br>
 * Reflection :
   I experiences this section of the assignment to be slightly easier than the first because seeing the vision take shape guided me.
 
+## Advanced CSS : <br>  
+* Challenges / Ideas : <br>
+  Nearly every part of this section challenged me :(. <br>
+  I found it difficult to optimise the structure for mobile-first and it took me quite a few tries to do. <br>
+* Decisions - Naviagtion , Structure : <br>
+  With the minimalistic effect in mind I kept a lot of white space. <br>
+  The buttons that change colour add a fine touch of interactivity. <br>
+  Toggled navigation is easier to use on smaller screens so I added it for efficiency. <br>
+* Mobile-first / Responsiveness : <br>
+  The trasition times are fast on elements. <br>
+  I used fast-loading media and clean code to help the site load efficiently on mobile. <br>
+  Transitions add to the feel of the sight. <br>
   
