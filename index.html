@@ -1,64 +1,98 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
   <head>
+     <!-- This meta tag sets the layout for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Inge de Beer - Portfolio</title>
+     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong|Lato">
+    <script src="script.js"></script>
   </head>
- <body>
-  <header>
-    <h1>Inge de Beer</h1>
-    <p>| Front-end Web Developer | Designer |</p>
-    <hr>
-        <!-- This is the navigation bar -->
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">My Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- This is the About section that includes an image of myself-->
-   <main>
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Inge. I love to bring ideas to life on the web with my unique outlook and styles.
-    </p>
-  <img src="Inge.JPG" alt="This is me!" style="float:right;width:42px;height:42px;">
-  </section>
-   <!-- This is the Projects section-->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-      <h3>Wix Site</h3>
-      <p>This is a website designed to show my experiences in different fields I experimented working in during high school.</p>
-      <a href="#">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Natural Health Solutions</h3>
-      <p>In this site you will see how I expanded my horizons by creating a ADHD-friendly website that works with them to help manage their adversities.</p>
-      <a href="#">View Project</a>
-    </div>
-  </section>
-   </main>
-   <!-- This is the Contact Section of the page -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ingedebeertab@gmail.com">ingedebeertab@gmail.com</a></p>
-    <p>Phone: <a href="tel:+27748995649">+27 74 899 5649</a></p>
-  </section>
- <!-- This is the Footer of the page with additional navigational features -->
-  <footer>
-    <p>Inge de Beer</p>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">My Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-  </footer>
- </body>
+  <body>
+     <!-- This is the header section containing the navigation bar -->
+    <header>
+      <h1>Inge de Beer</h1>
+      <p>| Front-end Web Developer | Designer |</p>
+      <hr>
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="hamburger"></span>
+        </button>
+          <!-- Navigation links for each section -->
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <script>
+        // This script toggles the visibility of the navigation menu on small screens
+        function toggleMenu() {
+          document.querySelector('.nav-links').classList.toggle('show');
+        }
+      </script>
+    </header>
+    <!-- This is the About section that includes an image of myself-->
+    <main>
+      <section id="about" class="card-2">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Hi! I'm Inge. I love to bring ideas to life on the web with my unique outlook and styles.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="Inge.JPG" alt="This is me!" style="max-width: 150px; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          </div>
+        </div>
+      </section>
+      <!-- This is the Projects section-->
+      <section id="projects" class="card-3">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <div class="card-2">
+              <h3>Wix Site</h3>
+              <p>This is a website designed to show my experiences in different fields I experimented working in during high school.</p>
+              <button class="project-button">View Project</button>
+            </div>
+          </div>
+          <div class="project">
+            <div class="card-2">
+              <h3>Natural Health Solutions</h3>
+              <p>In this site you will see how I expanded my horizons by creating a ADHD-friendly website that works with them to help manage their adversities.</p>
+              <button class="project-button">View Project</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- This is the Contact Section of the page -->
+    <section id="contact" class="card-2">
+      <h2>Contact</h2>
+      <p>Let's work together! Feel free to reach out.</p>
+      <a href="mailto:ingedebeertab@gmail.com"><button>Email</button></a>
+      <a href="tel:+27748995649"><button>Phone</button></a>
+    </section>
+    <!-- This is the Footer of the page with additional navigational features -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <p>Inge de Beer</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
