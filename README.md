@@ -16,9 +16,10 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   I chose a minimalistic , modern design because it portrays my design style. <br>
   It gives a clean and organised feeling which is how I like my projects to be.<br>
 * Typography : <br>
-  The fonts are both sans-serif for easy readability and it contributes to the clean aesthetic.<br>
+  The fonts are both serif and sans-serif for easy readability and it contributes to the clean aesthetic, it also separates the two from each other to avoid confusion.<br>
 * Colours : <br>
   All the colours I used are calming while still creating a large enough contrast for accessibility. <br>
+  The final shades of the colours have not been decided yet. <br>
 * Layout : 
   The navigation bar was centered and changed into a horizontal list to make it easily locatable. <br>
 * Validation :
@@ -35,8 +36,26 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   With the minimalistic effect in mind I kept a lot of white space. <br>
   The buttons that change colour add a fine touch of interactivity. <br>
   Toggled navigation is easier to use on smaller screens so I added it for efficiency. <br>
+  The image size reduces significantly on mobile/smaller screens. <br>
 * Mobile-first / Responsiveness : <br>
   The trasition times are fast on elements. <br>
   I used fast-loading media and clean code to help the site load efficiently on mobile. <br>
   Transitions add to the feel of the sight. <br>
   
+# Java Script Assignment
+## JS: <br>
+* Decision : <br>
+  I chose a simple pop-up message that indicates which project the user is viewing. <br>
+  It includes the title of the project with the message "You are viewing (project name)!" .<br>
+  I also added a rotation on the navigation menu. <br>
+* What user action triggers it : <br>
+  When the user clicks on the "View Project" button the message appears.<br>
+  The user opening the navigation menu triggers the rotation of the hamburger icon. <br>
+* Why you chose that interaction : <br>
+  It points out that the user is viewing the project they chose to click on. <br>
+  It gives confirmation that the site recognises the users' action. <br>
+* Any challenges or decisions you made while working with JavaScript : 
+  Understanding the use of Java Script was confusing while only seeing the theory. <br>
+  Once I started practicing and using it, seeing the effects myself it became easier to grasp. <br>
+* Validation :
+  When testing these additions in my console no errors turned up. <br>
