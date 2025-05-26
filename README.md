@@ -42,7 +42,7 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   I used fast-loading media and clean code to help the site load efficiently on mobile. <br>
   Transitions add to the feel of the sight. <br>
   
-# Java Script Assignment
+# JavaScript Assignment
 ## JS: <br>
 * Decision : <br>
   I chose a simple pop-up message that indicates which project the user is viewing. <br>
