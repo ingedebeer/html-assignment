@@ -59,3 +59,20 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   Once I started practicing and using it, seeing the effects myself it became easier to grasp. <br>
 * Validation :
   When testing these additions in my console no errors turned up. <br>
+  
+# JavaScript + Vue.js -> Assignment 6
+## JS A6: <br>
+* Decisions and Validation : <br>
+  I added a pop-up message that confirms the info the user entered and that they're message is submitted. <br>
+  Each line of the form is validated and shows errors when left blank to prevent automatic submission. <br>
+  The email section validates that it is an email address being entered. <br>
+  Each section has a minimum amount of letters to ensure accurate information. <br>
+* Interactions - Modal : <br>
+  When the user clicks "Send Messaget" the message appears.<br>
+  The user can close this popup/modal by clicking the "Close" button. <br>
+* Any challenges or decisions you made while working with JavaScript : 
+  I struggled to see the use of Vue.js before actually using and testing it on sites. <br>
+  When reading through the theory I got confused easily and applying it to the site without practice was difficult. <br>
+  Deciding on a format for the modal without overwhelming the user was a challenge since many people don't like pop-ups. <br>
+  There was an error in my code when I added this page and I needed to do a lot of reading to find and resolve it. <br>
+
