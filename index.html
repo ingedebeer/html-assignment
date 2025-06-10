@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
      <!-- This meta tag sets the layout for mobile responsiveness -->
@@ -7,6 +7,8 @@
      <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong|Lato">
+    <!-- Add Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -25,7 +27,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#projects">My Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <script>
@@ -71,13 +73,6 @@
         </div>
       </section>
     </main>
-    <!-- This is the Contact Section of the page -->
-    <section id="contact" class="card-2">
-      <h2>Contact</h2>
-      <p>Let's work together! Feel free to reach out.</p>
-      <a href="mailto:ingedebeertab@gmail.com"><button>Email</button></a>
-      <a href="tel:+27748995649"><button>Phone</button></a>
-    </section>
     <!-- This is the Footer of the page with additional navigational features -->
     <footer class="footer">
       <div class="footer-content">
@@ -89,10 +84,185 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">My Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </footer>
+    <script>
+      const { createApp } = Vue
+
+      createApp({
+        data() {
+          return {
+            form: {
+              name: '',
+              email: '',
+              message: ''
+            },
+            submittedData: {
+              name: '',
+              email: '',
+              message: ''
+            },
+            errors: {
+              name: '',
+              email: '',
+              message: ''
+            },
+            showPopup: false,
+            isSubmitting: false,
+            activeField: null,
+            formSubmitted: false
+          }
+        },
+        mounted() {
+          // Add keyboard event listener for form navigation
+          document.addEventListener('keydown', this.handleKeyboardNavigation);
+          
+          // Focus first input on mount
+          this.$nextTick(() => {
+            const firstInput = document.querySelector('#name');
+            if (firstInput) firstInput.focus();
+          });
+        },
+        beforeUnmount() {
+          // Clean up event listeners
+          document.removeEventListener('keydown', this.handleKeyboardNavigation);
+        },
+        methods: {
+          handleKeyboardNavigation(event) {
+            // Handle Tab key navigation
+            if (event.key === 'Tab') {
+              const inputs = ['name', 'email', 'message'];
+              const currentIndex = inputs.indexOf(this.activeField);
+              
+              if (event.shiftKey) {
+                // Move to previous field
+                if (currentIndex > 0) {
+                  this.focusField(inputs[currentIndex - 1]);
+                }
+              } else {
+                // Move to next field
+                if (currentIndex < inputs.length - 1) {
+                  this.focusField(inputs[currentIndex + 1]);
+                }
+              }
+            }
+            
+            // Handle Escape key
+            if (event.key === 'Escape') {
+              if (this.showPopup) {
+                this.closePopup();
+              }
+            }
+          },
+          focusField(fieldName) {
+            const field = document.getElementById(fieldName);
+            if (field) {
+              field.focus();
+              this.activeField = fieldName;
+            }
+          },
+          handleFieldFocus(field) {
+            this.activeField = field;
+            // Clear error when field is focused
+            if (this.errors[field]) {
+              this.errors[field] = '';
+            }
+          },
+          handleFieldBlur(field) {
+            // Validate field on blur
+            this.validateField(field);
+          },
+          validateField(field) {
+            const value = this.form[field];
+            let error = '';
+
+            if (!value) {
+              error = 'This field is required';
+            } else if (field === 'name' && value.length < 2) {
+              error = 'Name must be at least 2 characters long';
+            } else if (field === 'name' && value.length > 50) {
+              error = 'Name must be less than 50 characters';
+            } else if (field === 'email' && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+              error = 'Please enter a valid email address';
+            } else if (field === 'message' && value.length < 10) {
+              error = 'Message must be at least 10 characters long';
+            } else if (field === 'message' && value.length > 1000) {
+              error = 'Message must be less than 1000 characters';
+            }
+
+            this.errors[field] = error;
+            return !error;
+          },
+          validateForm() {
+            const isNameValid = this.validateField('name');
+            const isEmailValid = this.validateField('email');
+            const isMessageValid = this.validateField('message');
+
+            return isNameValid && isEmailValid && isMessageValid;
+          },
+          async handleSubmit() {
+            if (this.validateForm()) {
+              this.isSubmitting = true;
+              
+              try {
+                // Store the submitted data before resetting
+                this.submittedData = {
+                  name: this.form.name,
+                  email: this.form.email,
+                  message: this.form.message
+                };
+                
+                // Simulate API call with timeout
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                this.showPopup = true;
+                this.formSubmitted = true;
+                
+                // Reset form after successful submission
+                this.$nextTick(() => {
+                  this.resetForm();
+                });
+              } catch (error) {
+                console.error('Error submitting form:', error);
+                // Handle error state
+              } finally {
+                this.isSubmitting = false;
+              }
+            } else {
+              // Focus the first field with an error
+              const firstErrorField = Object.keys(this.errors).find(field => this.errors[field]);
+              if (firstErrorField) {
+                this.focusField(firstErrorField);
+              }
+            }
+          },
+          resetForm() {
+            this.form = {
+              name: '',
+              email: '',
+              message: ''
+            };
+            this.errors = {
+              name: '',
+              email: '',
+              message: ''
+            };
+            this.formSubmitted = false;
+            
+            // Focus first field after reset
+            this.$nextTick(() => {
+              this.focusField('name');
+            });
+          },
+          closePopup() {
+            this.showPopup = false;
+            this.resetForm();
+          }
+        }
+      }).mount('#app')
+    </script>
   </body>
 </html>
