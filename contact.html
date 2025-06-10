@@ -57,7 +57,7 @@
                 @blur="handleFieldBlur('email')"
                 :class="{ 'invalid': errors.email }"
                 required 
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 :aria-invalid="!!errors.email"
                 aria-describedby="email-error">
               <span class="error-message" id="email-error" role="alert">{{ errors.email }}</span>
@@ -133,7 +133,7 @@
     </footer>
 
     <script>
-      const { createApp } = Vue
+      const { createApp, nextTick } = Vue
 
       createApp({
         data() {
@@ -166,7 +166,7 @@
           document.addEventListener('keydown', this.handleKeyboardNavigation);
           
           // Focus first input on mount
-          this.$nextTick(() => {
+          nextTick(() => {
             const firstInput = document.querySelector('#name');
             if (firstInput) firstInput.focus();
           });
@@ -251,7 +251,7 @@
               error = 'Name must be at least 2 characters long';
             } else if (field === 'name' && value.length > 50) {
               error = 'Name must be less than 50 characters';
-            } else if (field === 'email' && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+            } else if (field === 'email' && !/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(value)) {
               error = 'Please enter a valid email address';
             } else if (field === 'message' && value.length < 10) {
               error = 'Message must be at least 10 characters long';
@@ -289,14 +289,14 @@
                 this.formSubmitted = true;
                 
                 // Reset form after successful submission
-                this.$nextTick(() => {
+                nextTick(() => {
                   this.resetForm();
                 });
               } catch (error) {
                 console.error('Error submitting form:', error);
                 this.submitError = 'Sorry, there was an error submitting your message. Please try again.';
                 // Focus the submit button on error
-                this.$nextTick(() => {
+                nextTick(() => {
                   const submitButton = document.querySelector('.submit-button');
                   if (submitButton) submitButton.focus();
                 });
@@ -326,7 +326,7 @@
             this.submitError = '';
             
             // Focus first field after reset
-            this.$nextTick(() => {
+            nextTick(() => {
               this.focusField('name');
             });
           },
