@@ -68,11 +68,13 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   The email section validates that it is an email address being entered. <br>
   Each section has a minimum amount of letters to ensure accurate information. <br>
 * Interactions - Modal : <br>
-  When the user clicks "Send Messaget" the message appears.<br>
+  When the user clicks "Send Message" the message appears.<br>
   The user can close this popup/modal by clicking the "Close" button. <br>
 * Any challenges or decisions you made while working with JavaScript : 
   I struggled to see the use of Vue.js before actually using and testing it on sites. <br>
   When reading through the theory I got confused easily and applying it to the site without practice was difficult. <br>
   Deciding on a format for the modal without overwhelming the user was a challenge since many people don't like pop-ups. <br>
   There was an error in my code when I added this page and I needed to do a lot of reading to find and resolve it. <br>
+  I misunderstood this assignment completely and had to redo it at the last minute because I coded this into my existing page. <br>
+  (I am still not entirely clear on how this assignment should have been done honestly). <br>
 
