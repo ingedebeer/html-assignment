@@ -78,3 +78,16 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   I misunderstood this assignment completely and had to redo it at the last minute because I coded this into my existing page. <br>
   (I am still not entirely clear on how this assignment should have been done honestly). <br>
 
+# Vue.js
+## Assignment 7: <br>
+* Validation and Modal interactions : <br>
+  Most of the interactions and validation are the same as they were with the previous assignment. <br>
+  The "Name"-field's validaion has been adjusted to only acccept letters, periods and hyphens. <br>
+  * Testing Notes : <br>
+  Although some elements look slightly different the page and buttons react the same.<br>
+  All the buttons are still the same as they previously were. <br>
+  No errors appeared during testing and the sight reacts the same across different browsers and screen sizes. <br>
+* Any challenges while working with Vue.js : 
+  The entered info didn't appear in the modal after initial canges. <br>
+  After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
+  
