@@ -87,7 +87,7 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   Although some elements look slightly different the page and buttons react the same.<br>
   All the buttons are still the same as they previously were. <br>
   No errors appeared during testing and the sight reacts the same across different browsers and screen sizes. <br>
-* Any challenges while working with Vue.js : 
+* Any challenges while working with Vue.js : <br>
   The entered info didn't appear in the modal after initial canges. <br>
   After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
   
