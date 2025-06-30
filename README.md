@@ -2,13 +2,6 @@
 
 A modern, minimalistic portfolio website built with Vue.js, featuring responsive design, project showcases, and a contact form with validation.
 
-## Features
-- **Modern Design:** Clean, minimal, and mobile-friendly layout
-- **Vue.js SPA:** Fast navigation with Vue Router
-- **Project Showcase:** Interactive project cards with pop-up modals
-- **About Me:** Creative, extended biography and photo
-- **Contact Form:** Validated form with confirmation modal
-- **Accessible:** Keyboard navigation and ARIA attributes
 
 ## Getting Started
 
@@ -144,4 +137,19 @@ I chose to add an image of myself because it adds a personal feel to the site wh
 * Any challenges while working with Vue.js : <br>
   The entered info didn't appear in the modal after initial canges. <br>
   After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
-  
+
+  # Assignment 8: <br>
+  ## Features
+*Modern Design: <br>
+Clean, minimal, and mobile-friendly layout
+*Vue.js SPA:* <br>
+Fast navigation with Vue Router
+*Project Showcase:* <br>
+Interactive project cards with pop-up modals
+*About Me:* <br>
+Creative, extended biography and photo
+*Contact Form:* <br>
+Validated form with confirmation modal
+*Accessible:* <br>
+Keyboard navigation and ARIA attributes
+
