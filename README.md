@@ -97,17 +97,17 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
 
 # Assignment 8: <br>
- ## Features
+ ## Pages and Structures:
 * Modern Design: <br>
-  Clean, minimal, and mobile-friendly layout
-* Vue.js SPA:* <br>
+  Clean, minimal, and mobile-friendly layout to ensure easy loading and navigation.
+* Vue.js SPA: <br>
   Fast navigation with Vue Router
-* Project Showcase:* <br>
+* Project Showcase: <br>
   Interactive project cards with pop-up modals
-* About Me:* <br>
+* About Me: <br>
   Creative, extended biography and photo
-* Contact Form:* <br>
+* Contact Form: <br>
   Validated form with confirmation modal
-* Accessible:* <br>
+* Accessible: <br>
   Keyboard navigation and ARIA attributes
   
