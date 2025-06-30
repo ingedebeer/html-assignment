@@ -3,48 +3,6 @@
 A modern, minimalistic portfolio website built with Vue.js, featuring responsive design, project showcases, and a contact form with validation.
 
 
-## Getting Started
-
-### Prerequisites
-- [Node.js & npm](https://nodejs.org/)
-
-### Setup
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/ingedebeer/html-assignment.git
-   cd html-assignment
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Start the development server:
-   ```sh
-   npm run dev
-   ```
-4. Open your browser to the local address shown (usually http://localhost:5173/)
-
-### Build for Production
-```sh
-npm run build
-npm run preview
-```
-
-## Project Structure
-- `components/` — Vue components for each page and feature
-- `router/` — Vue Router configuration
-- `styles.css` — Main stylesheet
-- `index.html` — App entry point
-- `main.js` — Vue app bootstrap
-
-## Credits
-- Designed and developed by Inge de Beer
-- Built with [Vue.js](https://vuejs.org/) and [Vite](https://vitejs.dev/)
-
----
-
-Feel free to fork, use, or contribute!
-
 # HTML Assignment 
 * Title : Shows the main purpose of the page - My portfolio <br>
 * The Header : includes my page name as well as the naigation section.<br>
@@ -138,18 +96,18 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   The entered info didn't appear in the modal after initial canges. <br>
   After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
 
-  # Assignment 8: <br>
-  ## Features
-*Modern Design: <br>
-Clean, minimal, and mobile-friendly layout
-*Vue.js SPA:* <br>
-Fast navigation with Vue Router
-*Project Showcase:* <br>
-Interactive project cards with pop-up modals
-*About Me:* <br>
-Creative, extended biography and photo
-*Contact Form:* <br>
-Validated form with confirmation modal
-*Accessible:* <br>
-Keyboard navigation and ARIA attributes
-
+# Assignment 8: <br>
+ ## Features
+* Modern Design: <br>
+  Clean, minimal, and mobile-friendly layout
+* Vue.js SPA:* <br>
+  Fast navigation with Vue Router
+* Project Showcase:* <br>
+  Interactive project cards with pop-up modals
+* About Me:* <br>
+  Creative, extended biography and photo
+* Contact Form:* <br>
+  Validated form with confirmation modal
+* Accessible:* <br>
+  Keyboard navigation and ARIA attributes
+  
