@@ -97,7 +97,7 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   After resolving this issue it was pretty straight-forward and I could focus on the smaller details like look and feel across the sight. <br>
 
 # Assignment 8: <br>
- ## Pages and Structures:
+ ## Summary: 
 * Modern Design: <br>
   Clean, minimal, and mobile-friendly layout to ensure easy loading and navigation.
 * Vue.js SPA: <br>
@@ -110,4 +110,32 @@ I chose to add an image of myself because it adds a personal feel to the site wh
   Validated form with confirmation modal
 * Accessible: <br>
   Keyboard navigation and ARIA attributes
-  
+
+## About the Vue Router & Page Structure
+
+### How I implemented Vue Router
+* I used [Vue Router](https://router.vuejs.org/) to turn this site into a single-page application. <br>
+* The router is set up in `router/index.js`, where I defined routes for each main page (Home, About, Projects, Contact, and a Not Found page). <br>
+* Each route points to its own Vue component, and navigation is handled with `<router-link>`s in the main navigation bar.
+
+### What pages I created and how they're structured
+* Home: A welcoming hero section , a short about me section , and a preview of my projects. <br>
+* About Me: A more detailed look at my journey, philosophy, and a photo, plus a button to see my work. <br>
+* Projects: Each project gets its own card with a longer description and a "View Project" popup. <br>
+* Contact: A form with real-time validation and a confirmation popup, so you know your message went through. <br>
+* Not Found: A friendly 404 page for any routes that don't exist. <br>
+
+Each page is its own Vue component, and the layout is designed to be clean and easy to navigate, both on desktop and mobile.
+
+### Challenges & Insights
+* Getting the modal popups just right took some trial and error, especially making sure they worked well on all screen sizes and didn't overlap with headings. <br> 
+* Moving from static HTML to Vue was a big shift, but it made the site much more interactive and maintainable.
+* Validation and accessibility : Making sure the contact form was both user-friendly and accessible was a challenge.
+* Keeping the code clean: I learned the value of good comments and structure, especially as the project grew.
+
+### Why routing matters in SPAs
+* Routing is what makes a single-page app feel like a real website. Instead of loading a whole new page every time you click a link, the app just swaps out the content you need. This means: <br>
+- Faster navigation (no full page reloads) <br>
+- Smoother user experience <br>
+- The ability to share and bookmark specific pages (like /about or /projects) <br>
+- Easier to manage and scale as your site grows <br>
