@@ -139,3 +139,43 @@ Each page is its own Vue component, and the layout is designed to be clean and e
 - Smoother user experience <br>
 - The ability to share and bookmark specific pages (like /about or /projects) <br>
 - Easier to manage and scale as your site grows <br>
+
+# Summative Assignment adjustments
+
+This project is a polished, production-ready portfolio site for Inge de Beer, built with Vue 3 and Vite. Below is a detailed summary of all the changes and improvements made to achieve the final design and functionality:
+
+## Major Adjustments and Features
+
+### 1. **Navigation and Routing**
+- Implemented Vue Router for seamless navigation between Home, About, Projects, and Contact pages.
+- Fixed scroll behavior so every route navigation scrolls to the top of the page.
+- Made the site name ("Inge de Beer") in the header and footer a subtle home button, visually unchanged but clickable.
+- Switched to hash mode routing (`createWebHashHistory`) for full GitHub Pages compatibility (no more 404 errors on refresh or direct links).
+
+### 2. **Design and Responsiveness**
+- Increased base font size for better readability on large screens.
+- Ensured all major headings (`h1`, `h2`, `h3`) have a consistent purple underline across all pages.
+- Made all "View Project" buttons equal in width and style on both the Home and Projects pages, including the Wix Site button.
+- Improved modal (popup) layout on mobile: the close (X) button no longer overlaps headings.
+- Ensured all modals and popups are accessible and visually clean on all devices.
+
+### 3. **Accessibility and Usability**
+- Added keyboard accessibility for navigation and interactive elements.
+- Ensured all buttons and links have clear focus states and are usable via keyboard.
+- Improved color contrast and visual clarity for all interactive elements.
+
+### 4. **Favicon and Branding**
+- Added a default `favicon.ico` to the project and referenced it in `index.html` for browser tab branding.
+
+### 5. **Deployment and Hosting**
+- Configured Vite with the correct `base` path for GitHub Pages (`/html-assignment/`).
+- Automated deployment to GitHub Pages using `gh-pages` and a postbuild script to copy `index.html` to `404.html` (SPA routing fix).
+
+### 6. **Codebase Cleanliness and Maintenance**
+- Resolved all console errors and warnings.
+- Cleaned up unused code and ensured all files are up to date in the GitHub repository.
+- Added clear, maintainable CSS for all custom styles and responsive adjustments.
+
+## Live Site
+
+My site is live at: [https://ingedebeer.github.io/html-assignment/](https://ingedebeer.github.io/html-assignment/)
